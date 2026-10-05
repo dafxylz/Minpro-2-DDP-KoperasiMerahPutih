@@ -117,6 +117,7 @@ while True:
                             "bayar": 0
                         })
                         print("Pinjaman berhasil ditambahkan!")
+                        input("Enter untuk melanjutkan...")
                     else:
                         print("Pilihan salah!")
                 except:
