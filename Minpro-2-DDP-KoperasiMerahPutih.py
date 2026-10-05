@@ -13,11 +13,9 @@ pinjaman = []
 
 while True:
     os.system("cls" if os.name == "nt" else "clear")
-
     print("=== LOGIN KOPERASI ===")
     user = input("Username: ")
     password = pwinput.pwinput("Password: ")
-
     if user not in akun or password != akun[user][0]:
         print("Login gagal!")
         input("Enter untuk melanjutkan...")
@@ -33,25 +31,23 @@ while True:
             print("1. Pilih Pinjaman")
             print("2. Bayar Pinjaman")
             print("3. Lihat Pinjaman")
-            print("4. keluar")
+            print("4. Logout akun")
+            print("5. Keluar")
         else:
             print("1. Tambah Peminjam")
             print("2. Hapus Peminjam")
             print("3. Lihat Peminjam")
-            print("4. keluar")
-
+            print("4. Logout akun")
+            print("5. keluar")
         menu = input("Pilih: ")
-
+        
         if role == "user":
             os.system("cls" if os.name == "nt" else "clear")
             if menu == "1":
-                print("pilih pinjaman")
                 for i in range(3):
                     print(i + 1, jenis[i], jumlah[i])
-
                 try:
                     p = int(input("Pilih: "))
-
                     if 1 <= p <= 3:
                         pinjaman.append({
                             "nama": user,
@@ -64,14 +60,12 @@ while True:
                         print("Pilihan salah!")
                 except:
                     print("Masukkan angka!")
-
             elif menu == "2":
                 if pinjaman:
                     try:
                         bayar = int(input("Bayar: "))
                         data = pinjaman[0]
                         sisa = data["jumlah"] - data["bayar"]
-
                         if 0 < bayar <= sisa:
                             data["bayar"] += bayar
                             print("Pembayaran berhasil!")
@@ -81,13 +75,11 @@ while True:
                         print("Masukkan angka!")
                 else:
                     print("Belum ada pinjaman.")
-
             elif menu == "3":
                 if pinjaman:
                     tabel = PrettyTable(
                         ["No", "Nama", "Jenis", "Pinjaman", "Bayar", "Sisa"]
                     )
-
                     for i, data in enumerate(pinjaman, 1):
                         tabel.add_row([
                             i,
@@ -97,23 +89,24 @@ while True:
                             data["bayar"],
                             data["jumlah"] - data["bayar"]
                         ])
-
                     print(tabel)
                 else:
                     print("Belum ada pinjaman.")
-
             elif menu == "4":
                 break
-
+            elif menu == "5":
+                print("terimakasih")
+                exit()
+            else :
+                print("Menu tidak tersedia")
+                input("enter untuk melanjutkan...")
         else:
             if menu == "1":
                 os.system("cls" if os.name == "nt" else "clear")
                 nama = input("\nNama peminjam: ")
                 print("pilih pinjaman")
-
                 for i in range(3):
                     print(i + 1, jenis[i], jumlah[i])
-
                 try:
                     p = int(input("Pilih: "))
                     if 1 <= p <= 3:
@@ -128,16 +121,13 @@ while True:
                         print("Pilihan salah!")
                 except:
                     print("Masukkan angka!")
-
             elif menu == "2":
                 os.system("cls" if os.name == "nt" else "clear")
                 if pinjaman:
                     for i, data in enumerate(pinjaman, 1):
                         print(i, data["nama"], data["jenis"])
-
                     try:
                         h = int(input("Hapus nomor: "))
-
                         if 1 <= h <= len(pinjaman):
                             pinjaman.pop(h-1)
                             print("Berhasil dihapus!")
@@ -147,14 +137,12 @@ while True:
                         print("Masukkan angka!")
                 else:
                     print("Belum ada pinjaman.")
-
             elif menu == "3":
                 os.system("cls" if os.name == "nt" else "clear")
                 if pinjaman:
                     tabel = PrettyTable(
                         ["No", "Nama", "Jenis", "Pinjaman", "Bayar", "Sisa"]
                     )
-
                     for i, data in enumerate(pinjaman, 1):
                         tabel.add_row([
                             i,
@@ -164,12 +152,16 @@ while True:
                             data["bayar"],
                             data["jumlah"] - data["bayar"]
                         ])
-
                     print(tabel)
                 else:
                     print("Belum ada pinjaman.")
-
             elif menu == "4":
                 break
+            elif menu == "5":
+                            print("terimakasih")
+                            exit()
+            else :
+                print("Menu tidak tersedia")
+                input("enter untuk melanjutkan...")
 
-        input("\nEnter Untuk Melanjutkan...")
+        
