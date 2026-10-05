@@ -1,11 +1,10 @@
-
 import os
 import pwinput
 from prettytable import PrettyTable
 
 akun = {
-    "admin": ["123", "admin"],
-    "user": ["123", "user"]
+    "admin": ["cihuy", "admin"],
+    "user": ["gacor", "user"]
 }
 
 jenis = ("Kecil", "Sedang", "Besar")
@@ -21,14 +20,14 @@ while True:
 
     if user not in akun or password != akun[user][0]:
         print("Login gagal!")
-        input("Enter...")
+        input("Enter untuk melanjutkan...")
         continue
 
     role = akun[user][1]
 
     while True:
         os.system("cls" if os.name == "nt" else "clear")
-        print("\n=== MENU", role.upper(), "===")
+        print("=== MENU", role.upper(), "===")
 
         if role == "user":
             print("1. Pilih Pinjaman")
@@ -44,7 +43,9 @@ while True:
         menu = input("Pilih: ")
 
         if role == "user":
+            os.system("cls" if os.name == "nt" else "clear")
             if menu == "1":
+                print("pilih pinjaman")
                 for i in range(3):
                     print(i + 1, jenis[i], jumlah[i])
 
@@ -105,10 +106,10 @@ while True:
                 break
 
         else:
-            os.system("cls" if os.name == "nt" else "clear")
             if menu == "1":
                 os.system("cls" if os.name == "nt" else "clear")
-                nama = input("Nama peminjam: ")
+                nama = input("\nNama peminjam: ")
+                print("pilih pinjaman")
 
                 for i in range(3):
                     print(i + 1, jenis[i], jumlah[i])
@@ -171,4 +172,4 @@ while True:
             elif menu == "4":
                 break
 
-        input("\nTekan Untuk Melanjutkan...")
+        input("\nEnter Untuk Melanjutkan...")
