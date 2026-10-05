@@ -24,7 +24,7 @@ disini menggunakan library pwinput untuk password
 
 tampilan menu admin
 <br/>
-<img width="229" height="154" alt="image" src="https://github.com/user-attachments/assets/71b35913-e435-4e4b-bcea-5a432d2f81a4" />
+<img width="242" height="160" alt="image" src="https://github.com/user-attachments/assets/fb834c52-1016-41bb-bef8-febbea66365a" />
 <br/>
 disini admin bisa menambah peminjam, melihat peminjam dan menghapus peminjam
 <br/>
@@ -44,8 +44,14 @@ untuk menu ini menggunakan library preetytable
 <img width="503" height="171" alt="image" src="https://github.com/user-attachments/assets/561f01a0-1410-4b25-8abf-3668abee9574" />
 
 pilihan 4, keluar dan akan kembali ke menu login
+<br/>
+pilihan 5, program akan keluar dan berhenti sepenuhnya
+<br/>
+<img width="476" height="44" alt="image" src="https://github.com/user-attachments/assets/a8323150-c779-4762-a40d-4a79bc68d928" />
+
 
 LOGIN ROLE USER
+<br/>
 <br/>
 <img width="255" height="75" alt="image" src="https://github.com/user-attachments/assets/fe76ec6b-69f7-4e1d-84eb-2ae5e45972d5" />
 <br/>
@@ -66,6 +72,13 @@ pilihan 3, user dapat melihat pinjaman yang dipilih dan nominal yang telah terba
 menu ini juga menggunakan prettytable
 <br/>
 <img width="521" height="156" alt="image" src="https://github.com/user-attachments/assets/8c6fcfd1-f498-4504-8dab-631dfa152457" />
+
+pilihan 4, keluar dan akan kembali ke menu login
+<br/>
+pilihan 5, program akan keluar dan berhenti sepenuhnya
+<br/>
+<img width="476" height="44" alt="image" src="https://github.com/user-attachments/assets/a8323150-c779-4762-a40d-4a79bc68d928" />
+
 
 
 
