@@ -3,6 +3,10 @@ Nama : Daffa Naufal Abiyyi
 <br/>
 Nim : 2609116025
 
+FLOWCHART
+<br/>
+<img width="2551" height="2200" alt="KOKOKOK drawio" src="https://github.com/user-attachments/assets/ce852aa4-206c-4062-8369-0d73005df5ad" />
+
 
 disini terdapat 2 role yaitu admin dan user
 <br/>
